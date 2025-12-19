@@ -1,1 +1,74 @@
-
+[
+  {
+    "id": 1,
+    "identificacion": "00123456789",
+    "nombre": "Ana García Rodríguez",
+    "grado": "7°",
+    "estado": "Activo",
+    "seccion": "A",
+    "correo": "ana.garcia@ejemplo.com"
+  },
+  {
+    "id": 2,
+    "identificacion": "00123456790",
+    "nombre": "Carlos Méndez Soto",
+    "grado": "7°",
+    "estado": "Activo",
+    "seccion": "A",
+    "correo": "carlos.mendez@ejemplo.com"
+  },
+  {
+    "id": 3,
+    "identificacion": "00123456791",
+    "nombre": "María Fernández López",
+    "grado": "8°",
+    "estado": "Activo",
+    "seccion": "B",
+    "correo": "maria.fernandez@ejemplo.com"
+  },
+  {
+    "id": 4,
+    "identificacion": "00123456792",
+    "nombre": "José González Pérez",
+    "grado": "8°",
+    "estado": "Activo",
+    "seccion": "B",
+    "correo": "jose.gonzalez@ejemplo.com"
+  },
+  {
+    "id": 5,
+    "identificacion": "00123456793",
+    "nombre": "Laura Chaves Jiménez",
+    "grado": "9°",
+    "estado": "Activo",
+    "seccion": "C",
+    "correo": "laura.chaves@ejemplo.com"
+  },
+  {
+    "id": 6,
+    "identificacion": "00123456794",
+    "nombre": "Diego Ramírez Vargas",
+    "grado": "9°",
+    "estado": "Activo",
+    "seccion": "C",
+    "correo": "diego.ramirez@ejemplo.com"
+  },
+  {
+    "id": 7,
+    "identificacion": "00123456795",
+    "nombre": "Sofía Castro Rojas",
+    "grado": "7°",
+    "estado": "Activo",
+    "seccion": "A",
+    "correo": "sofia.castro@ejemplo.com"
+  },
+  {
+    "id": 8,
+    "identificacion": "00123456796",
+    "nombre": "Andrés Morales Cordero",
+    "grado": "8°",
+    "estado": "Activo",
+    "seccion": "B",
+    "correo": "andres.morales@ejemplo.com"
+  }
+]
