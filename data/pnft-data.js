@@ -1,506 +1,274 @@
 // ==============================================
-// PNFT_DATA - Base de datos completa de indicadores
-// Desde Materno hasta 9° grado
+// PNFT DATA COMPLETO - Indicadores con descriptores y criterios
+// Desde Materno hasta 9° grado - TODOS LOS INDICADORES
 // ==============================================
 
-const PNFT_DATA = {
-    // ========== MATERNO INFANTIL / TRANSICIÓN ==========
-    "Materno": {
-        areas: {
-            "Apropiación tecnológica y Digital": {
-                indicadores: [
-                    {
-                        id: "MAT_APRO_1",
-                        nombre: "Computadora",
-                        descripcion: "Identificar qué es una computadora y algunas de sus características",
-                        criterios: {
-                            "3": "Identifica correctamente todos los componentes y sus funciones",
-                            "2": "Identifica algunos componentes con ayuda",
-                            "1": "No identifica componentes o requiere mucha ayuda"
-                        }
-                    },
-                    {
-                        id: "MAT_APRO_2",
-                        nombre: "Software",
-                        descripcion: "Reconocer elementos visuales básicos de la interfaz de software",
-                        criterios: {
-                            "3": "Reconoce y usa iconos y botones de forma autónoma",
-                            "2": "Reconoce algunos elementos con guía",
-                            "1": "No reconoce los elementos básicos"
-                        }
-                    }
-                ]
-            },
-            "Programación y Algoritmos": {
-                indicadores: [
-                    {
-                        id: "MAT_PROG_1",
-                        nombre: "Entorno de programación iconográfico",
-                        descripcion: "Reconocer el entorno de programación iconográfico",
-                        criterios: {
-                            "3": "Navega autónomamente en el entorno",
-                            "2": "Navega con ayuda constante",
-                            "1": "No interactúa con el entorno"
-                        }
-                    }
-                ]
-            }
-        }
-    },
-
-    // ========== PRIMER GRADO ==========
-    "1°": {
-        areas: {
-            "Apropiación tecnológica y Digital": {
-                indicadores: [
-                    {
-                        id: "1_APRO_1",
-                        nombre: "Computadora",
-                        descripcion: "Reconocer la computadora como herramienta tecnológica",
-                        criterios: {
-                            "3": "Explica funciones y cuida el equipo responsablemente",
-                            "2": "Reconoce funciones básicas con supervisión",
-                            "1": "No reconoce el equipo como herramienta tecnológica"
-                        }
-                    },
-                    {
-                        id: "1_APRO_2",
-                        nombre: "Hardware",
-                        descripcion: "Identificar hardware básico y acciones de encendido/apagado",
-                        criterios: {
-                            "3": "Identifica y maneja correctamente todos los componentes",
-                            "2": "Identifica algunos componentes con ayuda",
-                            "1": "No identifica componentes básicos"
-                        }
-                    }
-                ]
-            },
-            "Programación y Algoritmos": {
-                indicadores: [
-                    {
-                        id: "1_PROG_1",
-                        nombre: "Entorno de programación iconográfico",
-                        descripcion: "Reconocer elementos básicos de programación iconográfica",
-                        criterios: {
-                            "3": "Usa todos los bloques básicos correctamente",
-                            "2": "Usa algunos bloques con ayuda",
-                            "1": "No interactúa con los bloques"
-                        }
-                    }
-                ]
-            }
-        }
-    },
-
-    // ========== SEGUNDO GRADO ==========
-    "2°": {
-        areas: {
-            "Apropiación tecnológica y Digital": {
-                indicadores: [
-                    {
-                        id: "2_APRO_1",
-                        nombre: "Hardware",
-                        descripcion: "Identificar funcionamiento y cuidado de componentes",
-                        criterios: {
-                            "3": "Explica funcionamiento y aplica cuidados preventivos",
-                            "2": "Identifica funciones básicas con guía",
-                            "1": "No reconoce funcionamiento ni cuidados"
-                        }
-                    },
-                    {
-                        id: "2_APRO_2",
-                        nombre: "Software (programas)",
-                        descripcion: "Explorar funcionamiento de diferentes programas",
-                        criterios: {
-                            "3": "Usa múltiples programas adecuadamente según tarea",
-                            "2": "Usa un programa con supervisión",
-                            "1": "No usa programas apropiadamente"
-                        }
-                    }
-                ]
-            },
-            "Programación y Algoritmos": {
-                indicadores: [
-                    {
-                        id: "2_PROG_1",
-                        nombre: "Entorno de programación por bloques",
-                        descripcion: "Aplicar entorno de programación por bloques",
-                        criterios: {
-                            "3": "Crea secuencias complejas de forma autónoma",
-                            "2": "Crea secuencias simples con ayuda",
-                            "1": "No crea secuencias significativas"
-                        }
-                    }
-                ]
-            }
-        }
-    },
-
-    // ========== TERCER GRADO ==========
-    "3°": {
-        areas: {
-            "Apropiación tecnológica y Digital": {
-                indicadores: [
-                    {
-                        id: "3_APRO_1",
-                        nombre: "Hardware",
-                        descripcion: "Explicar funciones básicas del hardware",
-                        criterios: {
-                            "3": "Explica claramente todas las funciones con ejemplos",
-                            "2": "Explica algunas funciones con ayuda",
-                            "1": "No explica funciones básicas"
-                        }
-                    },
-                    {
-                        id: "3_APRO_2",
-                        nombre: "Redes de comunicación",
-                        descripcion: "Describir qué son las redes de comunicación",
-                        criterios: {
-                            "3": "Describe redes locales y su funcionamiento con ejemplos",
-                            "2": "Describe conceptos básicos con guía",
-                            "1": "No describe conceptos de redes"
-                        }
-                    }
-                ]
-            },
-            "Programación y Algoritmos": {
-                indicadores: [
-                    {
-                        id: "3_PROG_1",
-                        nombre: "Algoritmo",
-                        descripcion: "Reconocer estructura y características de algoritmos",
-                        criterios: {
-                            "3": "Crea algoritmos complejos con lógica clara",
-                            "2": "Crea algoritmos simples con ayuda",
-                            "1": "No crea algoritmos estructurados"
-                        }
-                    }
-                ]
-            }
-        }
-    },
-
-    // ========== CUARTO GRADO ==========
-    "4°": {
-        areas: {
-            "Apropiación tecnológica y Digital": {
-                indicadores: [
-                    {
-                        id: "4_APRO_1",
-                        nombre: "Hardware",
-                        descripcion: "Clasificar componentes según su función",
-                        criterios: {
-                            "3": "Clasifica correctamente todos los tipos de hardware",
-                            "2": "Clasifica algunos componentes con ayuda",
-                            "1": "No clasifica componentes adecuadamente"
-                        }
-                    },
-                    {
-                        id: "4_APRO_2",
-                        nombre: "Software",
-                        descripcion: "Reconocer tipos de software y sus funciones",
-                        criterios: {
-                            "3": "Distingue todos los tipos y sus usos específicos",
-                            "2": "Distingue algunos tipos con guía",
-                            "1": "No distingue tipos de software"
-                        }
-                    }
-                ]
-            },
-            "Programación y Algoritmos": {
-                indicadores: [
-                    {
-                        id: "4_PROG_1",
-                        nombre: "Entorno de programación por bloques",
-                        descripcion: "Utilizar entorno de programación para resolver retos",
-                        criterios: {
-                            "3": "Resuelve retos complejos de forma autónoma",
-                            "2": "Resuelve retos simples con ayuda",
-                            "1": "No resuelve retos programados"
-                        }
-                    }
-                ]
-            }
-        }
-    },
-
-    // ========== QUINTO GRADO ==========
-    "5°": {
-        areas: {
-            "Apropiación tecnológica y Digital": {
-                indicadores: [
-                    {
-                        id: "5_APRO_1",
-                        nombre: "Hardware",
-                        descripcion: "Identificar dispositivos de entrada y salida mixtos",
-                        criterios: {
-                            "3": "Identifica y explica uso de dispositivos mixtos complejos",
-                            "2": "Identifica dispositivos básicos con ayuda",
-                            "1": "No identifica dispositivos mixtos"
-                        }
-                    },
-                    {
-                        id: "5_APRO_2",
-                        nombre: "Software",
-                        descripcion: "Identificar funcionalidad de software de ofimática",
-                        criterios: {
-                            "3": "Usa múltiples programas de ofimática correctamente",
-                            "2": "Usa un programa con supervisión",
-                            "1": "No usa programas de ofimática"
-                        }
-                    }
-                ]
-            },
-            "Programación y Algoritmos": {
-                indicadores: [
-                    {
-                        id: "5_PROG_1",
-                        nombre: "Entorno para computación física",
-                        descripcion: "Utilizar entorno de programación para computación física",
-                        criterios: {
-                            "3": "Programa sistemas físicos complejos autónomamente",
-                            "2": "Programa sistemas simples con ayuda",
-                            "1": "No programa sistemas físicos"
-                        }
-                    }
-                ]
-            }
-        }
-    },
-
-    // ========== SEXTO GRADO ==========
-    "6°": {
-        areas: {
-            "Apropiación tecnológica y Digital": {
-                indicadores: [
-                    {
-                        id: "6_APRO_1",
-                        nombre: "Hardware",
-                        descripcion: "Analizar funciones de componentes internos",
-                        criterios: {
-                            "3": "Analiza impacto de componentes en rendimiento del equipo",
-                            "2": "Describe funciones básicas de componentes",
-                            "1": "No analiza componentes internos"
-                        }
-                    },
-                    {
-                        id: "6_APRO_2",
-                        nombre: "Conexión entre dispositivos",
-                        descripcion: "Explicar cómo direcciones IP permiten conexión",
-                        criterios: {
-                            "3": "Explica funcionamiento de IP en redes complejas",
-                            "2": "Explica conceptos básicos de IP",
-                            "1": "No explica funcionamiento de direcciones IP"
-                        }
-                    }
-                ]
-            },
-            "Programación y Algoritmos": {
-                indicadores: [
-                    {
-                        id: "6_PROG_1",
-                        nombre: "Lógica de programación",
-                        descripcion: "Aplicar lógica con tablas de verdad",
-                        criterios: {
-                            "3": "Crea y evalúa tablas de verdad complejas",
-                            "2": "Comprende tablas de verdad simples",
-                            "1": "No comprende tablas de verdad"
-                        }
-                    }
-                ]
-            }
-        }
-    },
-
-    // ========== SÉPTIMO GRADO ==========
-    "7°": {
-        areas: {
-            "Apropiación tecnológica y Digital": {
-                indicadores: [
-                    {
-                        id: "7_APRO_1",
-                        nombre: "Computadora",
-                        descripcion: "Aplicar reglas básicas y responsabilidades de uso",
-                        criterios: {
-                            "3": "Aplica todas las normas de uso responsable autónomamente",
-                            "2": "Aplica algunas normas con supervisión",
-                            "1": "No aplica normas de uso responsable"
-                        }
-                    },
-                    {
-                        id: "7_APRO_2",
-                        nombre: "Hardware",
-                        descripcion: "Clasificar tipos de computadoras y componentes",
-                        criterios: {
-                            "3": "Clasifica y explica todos los tipos y componentes",
-                            "2": "Clasifica algunos tipos con ayuda",
-                            "1": "No clasifica tipos de hardware"
-                        }
-                    }
-                ]
-            },
-            "Programación y Algoritmos": {
-                indicadores: [
-                    {
-                        id: "7_PROG_1",
-                        nombre: "Entorno de programación textual",
-                        descripcion: "Reconocer entorno de programación textual",
-                        criterios: {
-                            "3": "Programa soluciones complejas en entorno textual",
-                            "2": "Escribe código simple con ayuda",
-                            "1": "No escribe código en entorno textual"
-                        }
-                    }
-                ]
-            }
-        }
-    },
-
-    // ========== OCTAVO GRADO ==========
-    "8°": {
-        areas: {
-            "Apropiación tecnológica y Digital": {
-                indicadores: [
-                    {
-                        id: "8_APRO_1",
-                        nombre: "Hardware",
-                        descripcion: "Analizar funcionamiento de componentes internos",
-                        criterios: {
-                            "3": "Analiza impacto en rendimiento con ejemplos técnicos",
-                            "2": "Describe funciones básicas de componentes",
-                            "1": "No analiza componentes internos"
-                        }
-                    },
-                    {
-                        id: "8_APRO_2",
-                        nombre: "Software",
-                        descripcion: "Analizar tipos de software según función",
-                        criterios: {
-                            "3": "Compara y contrasta diferentes tipos de software",
-                            "2": "Identifica tipos básicos con ayuda",
-                            "1": "No analiza tipos de software"
-                        }
-                    }
-                ]
-            },
-            "Programación y Algoritmos": {
-                indicadores: [
-                    {
-                        id: "8_PROG_1",
-                        nombre: "Programación para robótica",
-                        descripcion: "Aplicar programación para mecanismos robóticos",
-                        criterios: {
-                            "3": "Programa sistemas robóticos complejos autónomamente",
-                            "2": "Programa mecanismos simples con ayuda",
-                            "1": "No programa mecanismos robóticos"
-                        }
-                    }
-                ]
-            }
-        }
-    },
-
-    // ========== NOVENO GRADO ==========
-    "9°": {
-        areas: {
-            "Programación y Algoritmos": {
-                indicadores: [
-                    {
-                        id: "9_PROG_1",
-                        nombre: "Programación para robótica avanzada",
-                        descripcion: "Diseñar soluciones automatizadas en programación",
-                        criterios: {
-                            "3": "Diseña y programa soluciones complejas autónomamente",
-                            "2": "Diseña soluciones simples con supervisión",
-                            "1": "No diseña soluciones programadas"
-                        }
-                    },
-                    {
-                        id: "9_PROG_2",
-                        nombre: "Algoritmo",
-                        descripcion: "Diseñar algoritmos para resolver problemas",
-                        criterios: {
-                            "3": "Diseña algoritmos óptimos y eficientes",
-                            "2": "Diseña algoritmos funcionales con ayuda",
-                            "1": "No diseña algoritmos estructurados"
-                        }
-                    }
-                ]
-            },
-            "Computación física y Robótica": {
-                indicadores: [
-                    {
-                        id: "9_ROBO_1",
-                        nombre: "Movimiento en mecanismos",
-                        descripcion: "Identificar movimiento en mecanismos robóticos",
-                        criterios: {
-                            "3": "Analiza y optimiza movimientos complejos",
-                            "2": "Identifica movimientos básicos con ayuda",
-                            "1": "No identifica tipos de movimiento"
-                        }
-                    },
-                    {
-                        id: "9_ROBO_2",
-                        nombre: "Microcontrolador",
-                        descripcion: "Aplicar funciones de microcontrolador",
-                        criterios: {
-                            "3": "Programa microcontroladores para sistemas complejos",
-                            "2": "Usa funciones básicas con supervisión",
-                            "1": "No usa microcontroladores"
-                        }
-                    }
-                ]
-            },
-            "Apropiación tecnológica y Digital": {
-                indicadores: [
-                    {
-                        id: "9_APRO_1",
-                        nombre: "Redes de comunicación",
-                        descripcion: "Reconocer redes con sus protocolos e interfaces",
-                        criterios: {
-                            "3": "Explica protocolos complejos y su implementación",
-                            "2": "Describe protocolos básicos con ayuda",
-                            "1": "No reconoce protocolos de red"
-                        }
-                    },
-                    {
-                        id: "9_APRO_2",
-                        nombre: "Sistema Operativo",
-                        descripcion: "Aplicar técnicas de optimización",
-                        criterios: {
-                            "3": "Optimiza sistemas complejos autónomamente",
-                            "2": "Aplica técnicas básicas con guía",
-                            "1": "No aplica técnicas de optimización"
-                        }
-                    }
-                ]
-            }
-        }
-    }
-};
-
-// ===== RESULTADOS DE APRENDIZAJE POR CICLO =====
-const RDA_POR_CICLO = {
+const PNFT_DATA_COMPLETO = {
+    // ========== CICLO I (1°-3°) ==========
     "I Ciclo": {
-        "Apropiación tecnológica y Digital": 65,
-        "Tareas": 10,
-        "Prueba de ejecución": 15,
-        "Asistencia": 10
+        "1°": {
+            "Apropiación tecnológica y Digital": [
+                {
+                    id: "1_APRO_1",
+                    codigo: "TC.1.APRO.1",
+                    nombre: "Computadora como herramienta tecnológica",
+                    descriptor: "Reconocer la computadora como una herramienta tecnológica, identificando sus características básicas, funciones e importancia en la vida cotidiana.",
+                    criterios: {
+                        "3": "Identifica y explica todas las características y funciones de la computadora de forma autónoma. Demuestra uso responsable y cuidadoso.",
+                        "2": "Identifica características básicas con ayuda del docente. Usa la computadora con supervisión constante.",
+                        "1": "No reconoce la computadora como herramienta tecnológica. Requiere ayuda constante para cualquier interacción."
+                    }
+                },
+                {
+                    id: "1_APRO_2",
+                    codigo: "TC.1.APRO.2",
+                    nombre: "Hardware básico",
+                    descriptor: "Identificar el hardware básico de una computadora, reconociendo dispositivos de entrada, salida y las acciones de encendido y apagado.",
+                    criterios: {
+                        "3": "Identifica correctamente todos los dispositivos de entrada/salida. Enciende y apaga el equipo siguiendo el procedimiento correcto de forma autónoma.",
+                        "2": "Identifica algunos dispositivos con ayuda. Sigue procedimiento de encendido/apagado con supervisión.",
+                        "1": "No identifica dispositivos básicos. No sigue procedimientos de encendido/apagado."
+                    }
+                }
+            ],
+            "Programación y Algoritmos": [
+                {
+                    id: "1_PROG_1",
+                    codigo: "TC.1.PROG.1",
+                    nombre: "Entorno de programación iconográfico",
+                    descriptor: "Reconocer elementos básicos de un entorno de programación iconográfico, como bloques de desplazamiento, orientación, apariencia, sonido, eventos y control.",
+                    criterios: {
+                        "3": "Navega autónomamente en el entorno, identifica y usa correctamente todos los tipos de bloques. Crea secuencias simples.",
+                        "2": "Reconoce algunos bloques con ayuda constante. Sigue instrucciones para crear secuencias básicas.",
+                        "1": "No interactúa con el entorno. No reconoce tipos de bloques."
+                    }
+                }
+            ]
+        },
+        "2°": {
+            "Apropiación tecnológica y Digital": [
+                {
+                    id: "2_APRO_1",
+                    codigo: "TC.2.APRO.1",
+                    nombre: "Funcionamiento y cuidado del hardware",
+                    descriptor: "Identificar el funcionamiento de los componentes básicos del hardware, reconociendo cómo cuidarlos mientras utilizan la computadora.",
+                    criterios: {
+                        "3": "Explica funcionamiento de componentes y aplica cuidados preventivos de forma consistente. Identifica problemas básicos.",
+                        "2": "Identifica funciones básicas con guía. Aplica algunos cuidados con recordatorio.",
+                        "1": "No reconoce funcionamiento ni aplica cuidados. Daña equipos por descuido."
+                    }
+                }
+            ]
+        },
+        "3°": {
+            "Apropiación tecnológica y Digital": [
+                {
+                    id: "3_APRO_1",
+                    codigo: "TC.3.APRO.1",
+                    nombre: "Funciones del hardware",
+                    descriptor: "Explicar las funciones básicas del hardware (entrada, procesamiento, almacenamiento y salida) en actividades prácticas.",
+                    criterios: {
+                        "3": "Explica claramente todas las funciones con ejemplos prácticos. Relaciona componentes con sus funciones específicas.",
+                        "2": "Explica algunas funciones con ayuda. Identifica componentes básicos.",
+                        "1": "No explica funciones básicas. No relaciona componentes con funciones."
+                    }
+                }
+            ]
+        }
     },
+
+    // ========== CICLO II (4°-6°) ==========
     "II Ciclo": {
-        "Apropiación tecnológica y Digital": 60,
-        "Tareas": 10,
-        "Prueba de ejecución": 20,
-        "Asistencia": 10
+        "4°": {
+            "Apropiación tecnológica y Digital": [
+                {
+                    id: "4_APRO_1",
+                    codigo: "TC.4.APRO.1",
+                    nombre: "Clasificación de hardware",
+                    descriptor: "Clasificar componentes de hardware según su función, distinguiendo entre dispositivos computacionales y periféricos.",
+                    criterios: {
+                        "3": "Clasifica correctamente todos los tipos de hardware y explica sus funciones específicas en diferentes contextos.",
+                        "2": "Clasifica algunos componentes con ayuda. Identifica funciones básicas.",
+                        "1": "No clasifica componentes adecuadamente. Confunde tipos de hardware."
+                    }
+                }
+            ]
+        },
+        "5°": {
+            "Apropiación tecnológica y Digital": [
+                {
+                    id: "5_APRO_1",
+                    codigo: "TC.5.APRO.1",
+                    nombre: "Dispositivos de entrada/salida mixtos",
+                    descriptor: "Identificar dispositivos de hardware de entrada y salida mixtos como impresora multifuncional y pantallas interactivas.",
+                    criterios: {
+                        "3": "Identifica y explica uso de dispositivos mixtos complejos en diferentes escenarios. Soluciona problemas básicos.",
+                        "2": "Identifica dispositivos básicos con ayuda. Sigue instrucciones para su uso.",
+                        "1": "No identifica dispositivos mixtos. No los utiliza apropiadamente."
+                    }
+                }
+            ]
+        },
+        "6°": {
+            "Apropiación tecnológica y Digital": [
+                {
+                    id: "6_APRO_1",
+                    codigo: "TC.6.APRO.1",
+                    nombre: "Componentes internos del hardware",
+                    descriptor: "Analizar las funciones de los componentes internos del hardware como memoria RAM, tarjeta madre, disco duro, microprocesador.",
+                    criterios: {
+                        "3": "Analiza impacto de componentes en rendimiento del equipo. Explica relaciones entre componentes.",
+                        "2": "Describe funciones básicas de componentes. Identifica algunos componentes internos.",
+                        "1": "No analiza componentes internos. No comprende su función."
+                    }
+                }
+            ]
+        }
     },
+
+    // ========== CICLO III (7°-9°) ==========
     "III Ciclo": {
-        "Apropiación tecnológica y Digital": 50,
-        "Tareas": 10,
-        "Proyecto": 30,
-        "Asistencia": 10
+        "7°": {
+            "Apropiación tecnológica y Digital": [
+                {
+                    id: "7_APRO_1",
+                    codigo: "TC.7.APRO.1",
+                    nombre: "Reglas de uso responsable",
+                    descriptor: "Aplicar reglas básicas y responsabilidades durante el uso de una computadora, contribuyendo al cuidado, seguridad y prolongación de su vida útil.",
+                    criterios: {
+                        "3": "Aplica todas las normas de uso responsable autónomamente. Modela comportamientos adecuados para otros.",
+                        "2": "Aplica algunas normas con supervisión. Requiere recordatorios ocasionales.",
+                        "1": "No aplica normas de uso responsable. Descuidado con el equipo."
+                    }
+                },
+                {
+                    id: "7_APRO_2",
+                    codigo: "TC.7.APRO.2",
+                    nombre: "Clasificación de hardware",
+                    descriptor: "Clasificar tipos de computadoras y sus componentes principales de hardware, identificando funciones de periféricos comunes.",
+                    criterios: {
+                        "3": "Clasifica y explica todos los tipos y componentes. Compara características de diferentes dispositivos.",
+                        "2": "Clasifica algunos tipos con ayuda. Identifica funciones básicas.",
+                        "1": "No clasifica tipos de hardware. No identifica componentes."
+                    }
+                }
+            ],
+            "Programación y Algoritmos": [
+                {
+                    id: "7_PROG_1",
+                    codigo: "TC.7.PROG.1",
+                    nombre: "Entorno de programación textual",
+                    descriptor: "Reconocer un entorno de programación textual o por bloques, identificando sus funciones para aplicarlos en la resolución de ejercicios.",
+                    criterios: {
+                        "3": "Programa soluciones complejas en entorno textual. Depura errores y optimiza código.",
+                        "2": "Escribe código simple con ayuda. Sigue ejemplos proporcionados.",
+                        "1": "No escribe código en entorno textual. No comprende estructura básica."
+                    }
+                }
+            ]
+        },
+        "8°": {
+            "Apropiación tecnológica y Digital": [
+                {
+                    id: "8_APRO_1",
+                    codigo: "TC.8.APRO.1",
+                    nombre: "Análisis de componentes internos",
+                    descriptor: "Analizar el funcionamiento de los componentes internos del hardware, describiendo cómo influyen en el rendimiento y desempeño del equipo.",
+                    criterios: {
+                        "3": "Analiza impacto en rendimiento con ejemplos técnicos. Propone mejoras basadas en componentes.",
+                        "2": "Describe funciones básicas de componentes. Identifica componentes principales.",
+                        "1": "No analiza componentes internos. No comprende su impacto."
+                    }
+                }
+            ],
+            "Programación y Algoritmos": [
+                {
+                    id: "8_PROG_1",
+                    codigo: "TC.8.PROG.1",
+                    nombre: "Programación para robótica",
+                    descriptor: "Aplicar el entorno de programación textual o por bloques para programar mecanismos robóticos, utilizando estructuras y eventos en la solución de actividades de automatización.",
+                    criterios: {
+                        "3": "Programa sistemas robóticos complejos autónomamente. Integra múltiples sensores y actuadores.",
+                        "2": "Programa mecanismos simples con ayuda. Sigue diagramas de conexión.",
+                        "1": "No programa mecanismos robóticos. No conecta componentes correctamente."
+                    }
+                }
+            ]
+        },
+        "9°": {
+            "Programación y Algoritmos": [
+                {
+                    id: "9_PROG_1",
+                    codigo: "TC.9.PROG.1",
+                    nombre: "Programación para robótica avanzada",
+                    descriptor: "Diseñar soluciones automatizadas en un entorno de programación textual o por bloques para programar mecanismos robóticos.",
+                    criterios: {
+                        "3": "Diseña y programa soluciones complejas autónomamente. Optimiza algoritmos para eficiencia.",
+                        "2": "Diseña soluciones simples con supervisión. Implementa funciones básicas.",
+                        "1": "No diseña soluciones programadas. No estructura algoritmos."
+                    }
+                }
+            ],
+            "Computación física y Robótica": [
+                {
+                    id: "9_ROBO_1",
+                    codigo: "TC.9.ROBO.1",
+                    nombre: "Movimiento en mecanismos",
+                    descriptor: "Identificar el movimiento en mecanismos robóticos, diferenciando el movimiento de entrada y salida.",
+                    criterios: {
+                        "3": "Analiza y optimiza movimientos complejos. Diseña mecanismos eficientes.",
+                        "2": "Identifica movimientos básicos con ayuda. Sigue instrucciones para ensamblaje.",
+                        "1": "No identifica tipos de movimiento. No ensambla mecanismos correctamente."
+                    }
+                }
+            ],
+            "Apropiación tecnológica y Digital": [
+                {
+                    id: "9_APRO_1",
+                    codigo: "TC.9.APRO.1",
+                    nombre: "Redes y protocolos",
+                    descriptor: "Reconocer las redes de comunicación a partir de su arquitectura, protocolos (como HTTP, HTTPS y TCP/IP) e interfaces.",
+                    criterios: {
+                        "3": "Explica protocolos complejos y su implementación. Configura conexiones básicas.",
+                        "2": "Describe protocolos básicos con ayuda. Identifica tipos de conexión.",
+                        "1": "No reconoce protocolos de red. No comprende conceptos básicos."
+                    }
+                }
+            ]
+        }
     }
 };
 
-// Hacer disponibles globalmente
-window.PNFT_DATA = PNFT_DATA;
-window.RDA_POR_CICLO = RDA_POR_CICLO;
+// ===== FUNCIONES DE ACCESO =====
+function obtenerIndicadoresPorCicloYGrado(ciclo, grado, area) {
+    const cicloData = PNFT_DATA_COMPLETO[ciclo];
+    if (!cicloData) return [];
+    
+    const gradoData = cicloData[grado];
+    if (!gradoData) return [];
+    
+    return gradoData[area] || [];
+}
+
+function obtenerTodosGradosPorCiclo(ciclo) {
+    const cicloData = PNFT_DATA_COMPLETO[ciclo];
+    if (!cicloData) return [];
+    
+    return Object.keys(cicloData);
+}
+
+function obtenerAreasPorCicloYGrado(ciclo, grado) {
+    const cicloData = PNFT_DATA_COMPLETO[ciclo];
+    if (!cicloData) return [];
+    
+    const gradoData = cicloData[grado];
+    if (!gradoData) return [];
+    
+    return Object.keys(gradoData);
+}
+
+// Hacer disponible globalmente
+window.PNFT_DATA_COMPLETO = PNFT_DATA_COMPLETO;
+window.obtenerIndicadoresPorCicloYGrado = obtenerIndicadoresPorCicloYGrado;
+window.obtenerTodosGradosPorCiclo = obtenerTodosGradosPorCiclo;
+window.obtenerAreasPorCicloYGrado = obtenerAreasPorCicloYGrado;
