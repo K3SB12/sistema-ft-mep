@@ -1,1 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema FT-MEP | Evaluación Integral</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-laptop-code"></i>
+            <div>
+                <h1>SISTEMA FT-MEP</h1>
+                <p>Evaluación Integral - Programa Nacional de Formación Tecnológica</p>
+            </div>
+        </div>
+        <div class="user-info">
+            <div class="periodo-selector">
+                <span id="periodo-actual">I Trimestre 2024</span>
+                <button onclick="cambiarPeriodo()" class="btn-small">
+                    <i class="fas fa-calendar-alt"></i> Cambiar
+                </button>
+            </div>
+            <div class="ciclo-actual">
+                <span class="badge ciclo-badge" id="ciclo-actual">III CICLO</span>
+            </div>
+        </div>
+    </header>
 
+    <!-- Navegación Principal -->
+    <nav class="main-nav">
+        <div class="nav-section">
+            <button class="nav-btn active" data-section="dashboard">
+                <i class="fas fa-tachometer-alt"></i> Dashboard
+            </button>
+            <button class="nav-btn" data-section="estudiantes">
+                <i class="fas fa-users"></i> Estudiantes
+            </button>
+            <button class="nav-btn" data-section="indicadores">
+                <i class="fas fa-list-check"></i> Indicadores
+            </button>
+            <button class="nav-btn" data-section="cotidiano">
+                <i class="fas fa-clipboard-check"></i> Trabajo Cotidiano
+            </button>
+        </div>
+        <div class="nav-section">
+            <button class="nav-btn" data-section="tareas">
+                <i class="fas fa-tasks"></i> Tareas (10%)
+            </button>
+            <button class="nav-btn" data-section="proyecto-pruebas">
+                <i class="fas fa-project-diagram"></i> Proyecto/Pruebas
+            </button>
+            <button class="nav-btn" data-section="asistencia">
+                <i class="fas fa-user-check"></i> Asistencia (10%)
+            </button>
+            <button class="nav-btn" data-section="reportes">
+                <i class="fas fa-file-excel"></i> Reportes
+            </button>
+        </div>
+    </nav>
+
+    <!-- Selector de Ciclo -->
+    <div class="selector-ciclo">
+        <div class="selector-title">
+            <i class="fas fa-graduation-cap"></i> Seleccionar Ciclo:
+        </div>
+        <div class="ciclo-buttons">
+            <button class="ciclo-btn" data-ciclo="I" onclick="seleccionarCiclo('I')">
+                I CICLO (1°-3°)
+            </button>
+            <button class="ciclo-btn" data-ciclo="II" onclick="seleccionarCiclo('II')">
+                II CICLO (4°-6°)
+            </button>
+            <button class="ciclo-btn active" data-ciclo="III" onclick="seleccionarCiclo('III')">
+                III CICLO (7°-9°)
+            </button>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Dashboard -->
+        <section id="dashboard" class="content-section active">
+            <div class="section-header">
+                <h2><i class="fas fa-tachometer-alt"></i> Dashboard de Evaluación</h2>
+                <div class="header-actions">
+                    <button class="btn-primary" onclick="generarReporteRapido()">
+                        <i class="fas fa-file-excel"></i> Reporte Rápido
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Estadísticas Principales -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-estudiantes">0</h3>
+                        <p>Estudiantes Activos</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="promedio-general">0.00</h3>
+                        <p>Promedio General</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="tc-completado">0%</h3>
+                        <p>TC Evaluado</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="asistencia-promedio">0%</h3>
+                        <p>Asistencia</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Componentes de Evaluación -->
+            <div class="componentes-grid">
+                <div class="componente-card">
+                    <h3><i class="fas fa-clipboard-check"></i> Trabajo Cotidiano</h3>
+                    <div class="componente-info">
+                        <span class="porcentaje" id="porcentaje-tc">65%</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="progress-tc" style="width: 0%"></div>
+                        </div>
+                        <button class="btn-small" onclick="cargarSeccion('cotidiano')">
+                            <i class="fas fa-edit"></i> Evaluar
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="componente-card">
+                    <h3><i class="fas fa-tasks"></i> Tareas</h3>
+                    <div class="componente-info">
+                        <span class="porcentaje">10%</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="progress-tareas" style="width: 0%"></div>
+                        </div>
+                        <button class="btn-small" onclick="cargarSeccion('tareas')">
+                            <i class="fas fa-plus"></i> Nueva
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="componente-card">
+                    <h3><i class="fas fa-project-diagram"></i> Proyecto</h3>
+                    <div class="componente-info">
+                        <span class="porcentaje" id="porcentaje-proyecto">30%</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="progress-proyecto" style="width: 0%"></div>
+                        </div>
+                        <button class="btn-small" onclick="cargarSeccion('proyecto-pruebas')">
+                            <i class="fas fa-eye"></i> Ver
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="componente-card">
+                    <h3><i class="fas fa-user-check"></i> Asistencia</h3>
+                    <div class="componente-info">
+                        <span class="porcentaje">10%</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="progress-asistencia" style="width: 0%"></div>
+                        </div>
+                        <button class="btn-small" onclick="cargarSeccion('asistencia')">
+                            <i class="fas fa-calendar"></i> Registrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lista de Estudiantes con Notas -->
+            <div class="table-card">
+                <h3><i class="fas fa-list-ol"></i> Notas de Estudiantes</h3>
+                <div class="table-responsive">
+                    <table class="data-table" id="tabla-notas-dashboard">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Estudiante</th>
+                                <th>Grado</th>
+                                <th>TC</th>
+                                <th>Tareas</th>
+                                <th>Proyecto</th>
+                                <th>Asist.</th>
+                                <th>Nota Final</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-notas-dashboard">
+                            <!-- Se llena dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Estudiantes -->
+        <section id="estudiantes" class="content-section">
+            <!-- Se carga desde modules/estudiantes.js -->
+        </section>
+
+        <!-- Sección Indicadores -->
+        <section id="indicadores" class="content-section">
+            <!-- Se carga desde modules/indicadores.js -->
+        </section>
+
+        <!-- Sección Trabajo Cotidiano -->
+        <section id="cotidiano" class="content-section">
+            <!-- Se carga desde modules/cotidiano.js -->
+        </section>
+
+        <!-- Sección Tareas -->
+        <section id="tareas" class="content-section">
+            <!-- Se carga desde modules/tareas.js -->
+        </section>
+
+        <!-- Sección Proyecto/Pruebas -->
+        <section id="proyecto-pruebas" class="content-section">
+            <!-- Se carga desde modules/proyecto-pruebas.js -->
+        </section>
+
+        <!-- Sección Asistencia -->
+        <section id="asistencia" class="content-section">
+            <!-- Se carga desde modules/asistencia.js -->
+        </section>
+
+        <!-- Sección Reportes -->
+        <section id="reportes" class="content-section">
+            <!-- Se carga desde modules/reportes.js -->
+        </section>
+    </main>
+
+    <!-- Modales -->
+    <div id="modal-container"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Sistema FT-MEP © 2024 | Ministerio de Educación Pública de Costa Rica</p>
+        <p class="version">Versión: 2.0 - Basado en estructura EXCEVAL</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data/pnft-data.js"></script>
+    <script src="app.js"></script>
+    <script src="modules/estudiantes.js"></script>
+    <script src="modules/indicadores.js"></script>
+    <script src="modules/cotidiano.js"></script>
+    <script src="modules/tareas.js"></script>
+    <script src="modules/proyecto-pruebas.js"></script>
+    <script src="modules/asistencia.js"></script>
+    <script src="modules/reportes.js"></script>
+</body>
+</html>
